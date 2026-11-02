@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#102b28" />
+  <meta name="description" content="Aprenda xadrez do básico a temas avançados em 30 aulas interativas com replay, desafios e explicações em português." />
+  <title>Xadrez Professor — Aprenda jogando</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./course.css" />
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <a href="./" class="brand" aria-label="Xadrez Professor, início"><span class="brand-mark">♞</span><span>xadrez<span class="brand-dot">.</span></span></a>
+      <div class="header-meta"><span>Seu curso de xadrez</span><span class="header-pill" id="header-progress">0 / 30 aulas</span></div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="intro-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> APRENDA JOGANDO</div>
+          <h1>Entenda o lance.<br /><em>Jogue com confiança.</em></h1>
+          <p>Uma trilha interativa do primeiro movimento a temas avançados. Veja cada ideia no tabuleiro, volte no replay e experimente em outra posição.</p>
+        </div>
+        <div class="course-summary"><span class="summary-icon">♘</span><div><strong id="summary-number">30</strong><span>aulas curtas</span></div><div class="summary-progress"><span id="summary-copy">Comece pelo primeiro lance</span><div class="summary-bar"><span id="summary-fill"></span></div></div></div>
+      </section>
+
+      <section class="curriculum" aria-label="Trilha de aprendizado">
+        <div class="curriculum-heading"><div><span class="tiny-label">SUA TRILHA</span><h2>Escolha onde praticar</h2></div><button type="button" id="recommended-btn" class="recommend-btn">Continuar de onde parei <span>↗</span></button></div>
+        <div class="unit-grid" id="unit-grid"></div>
+        <div class="lesson-picker"><div class="lesson-picker-heading"><span id="selected-unit-title">Conheça as peças</span><span id="selected-unit-progress">0 de 5 concluídas</span></div><div class="lesson-list" id="lesson-list"></div></div>
+      </section>
+
+      <section class="lesson-intro" aria-labelledby="lesson-title"><div><span class="tiny-label" id="lesson-eyebrow">AULA 01 · FUNDAMENTOS</span><h2 id="lesson-title">A torre segue linhas</h2><p id="lesson-subtitle">Aprenda a enxergar os caminhos da torre.</p></div><div class="lesson-meta"><span>◷ <span id="lesson-duration">3 minutos</span></span><span>↺ Replay livre</span></div></section>
+
+      <section class="lesson-card" aria-label="Aula interativa">
+        <div class="board-side"><div class="section-heading"><div><span class="tiny-label">TABULEIRO INTERATIVO</span><h3 id="board-heading">Observe o lance</h3></div><span class="board-status" id="board-status">Demonstração</span></div><div class="board-wrap"><div class="board" id="board" role="group" aria-label="Tabuleiro de xadrez, brancas embaixo"></div><div class="board-files" aria-hidden="true"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div></div><div class="board-note" id="board-note"><span class="note-spark">✦</span> Use os controles para acompanhar cada lance.</div></div>
+        <div class="teacher-side"><div class="teacher-top"><span class="tiny-label">SEU PROFESSOR</span><span class="step-count" id="step-count">01 / 03</span></div><div class="progress-track"><div id="progress-fill"></div></div><div class="teacher-avatar" aria-hidden="true">♘<span></span></div><div class="teacher-copy" aria-live="polite"><div class="copy-kicker" id="copy-kicker">OLHE A POSIÇÃO</div><h3 id="copy-title">Observe o tabuleiro.</h3><p id="copy-body"></p></div><div class="teacher-spacer"></div>
+          <div id="demo-controls" class="control-area"><div class="replay-controls"><button type="button" id="prev-btn" class="icon-btn" aria-label="Lance anterior">←</button><button type="button" id="play-btn" class="play-btn" aria-label="Reproduzir demonstração"><span id="play-icon">▶</span><span id="play-label">Reproduzir</span></button><button type="button" id="next-btn" class="icon-btn" aria-label="Próximo lance">→</button></div><button type="button" id="practice-btn" class="text-btn">Agora é sua vez <span>↗</span></button></div>
+          <div id="practice-controls" class="control-area hidden"><div class="hint-box" id="hint-box" aria-live="polite">Toque na peça branca e depois na casa escolhida.</div><div class="practice-actions"><button type="button" id="hint-btn" class="secondary-btn">Quero uma dica</button><button type="button" id="reset-btn" class="secondary-btn">Recomeçar</button></div></div>
+          <div id="success-controls" class="control-area hidden"><div class="success-box" id="success-box">✓ Você aplicou a ideia em outra posição.</div><div class="success-actions"><button type="button" id="next-lesson-btn" class="primary-btn">Próxima aula <span>→</span></button><button type="button" id="replay-again-btn" class="secondary-btn">Rever aula</button></div></div>
+        </div>
+      </section>
+      <div class="under-card"><span id="course-position">01 / 30 · Aula atual</span><span>Aprender → Observar → Praticar</span></div>
+    </main>
+    <footer>Feito para aprender um lance de cada vez. <span>Seu progresso fica salvo neste navegador.</span></footer>
+  </div>
+</body>
+</html>

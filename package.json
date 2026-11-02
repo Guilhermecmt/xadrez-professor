@@ -1,0 +1,14 @@
+{
+  "name": "xadrez-professor",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check dist/app.js && node --check dist/lessons.js && node scripts/validate-lessons.js && node scripts/test-course.js"
+  },
+  "dependencies": {
+    "chess.js": "^1.4.0"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.3"
+  }
+}
